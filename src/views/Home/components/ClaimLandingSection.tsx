@@ -1,4 +1,3 @@
-import PatientSignUpPopup from '@/views/auth/PatientSignUp/Popup';
 import React from 'react';
 import { BiBot, BiGlobe, BiMessageSquare, BiTrendingUp } from 'react-icons/bi';
 import { CgLock } from 'react-icons/cg';
@@ -16,36 +15,34 @@ const ClaimLandingSection = () => {
     ];
 
     return (
-        <div className="bg-gradient-to-br from-white to-blue-50">
-            <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-br from-white to-blue-50 px-4 py-12 sm:py-16">
+            <div className="w-full">
                 {/* Features Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12 max-w-full">
                     {features.map((feature, index) => (
-                        <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div className="flex items-center space-x-4">
-                                <div className="bg-indigo-100 p-3 rounded-lg">
-                                    {feature.icon}
-                                </div>
-                                <div>
-                                    <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-                                    <p className="text-sm text-gray-600">{feature.description}</p>
-                                </div>
+                        <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-4 max-w-full">
+                            <div className="bg-indigo-100 p-3 rounded-lg flex-shrink-0">
+                                {feature.icon}
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
+                                <p className="text-sm text-gray-600">{feature.description}</p>
                             </div>
                         </div>
                     ))}
                 </div>
 
                 {/* Main Content */}
-                <div className="flex flex-col items-center text-center space-y-8">
+                <div className="flex flex-col items-center text-center space-y-8 px-4 sm:px-0 max-w-full">
                     <div className="bg-primary p-4 rounded-full">
                         <BiBot className="w-12 h-12 text-white" />
                     </div>
 
                     <div className="max-w-2xl">
-                        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                             Claim Your Digital Front Office (Website)
                         </h1>
-                        <p className="text-xl text-gray-600 mb-8">
+                        <p className="text-lg sm:text-xl text-gray-600 mb-8">
                             Use power AI to transform your online presence and automate patient interactions
                         </p>
                     </div>
@@ -58,9 +55,9 @@ const ClaimLandingSection = () => {
                             placeholder="GoGetWell.ai/your_name"
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                         />
-                        <PatientSignUpPopup hcfLogin popupButtonStatus buttonChildren={<button className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300">
+                        <button className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300">
                             Join the Waiting List
-                        </button>} />
+                        </button>
                     </div>
                 </div>
             </div>

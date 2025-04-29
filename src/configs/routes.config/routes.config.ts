@@ -1,7 +1,7 @@
-import { lazy } from 'react'
+import { lazy, LazyExoticComponent } from 'react'
 import authRoute from './authRoute'
 import othersRoute from './othersRoute'
-import type { Routes } from '@/@types/routes'
+import type { Meta, Routes } from '@/@types/routes'
 
 export const publicRoutes: Routes = [...authRoute]
 
@@ -49,8 +49,8 @@ export const protectedRoutes: Routes = [
     },
     {
         key: 'homePage',
-        path: `/hello`,
-        component: lazy(() => import('@/views/Home')),
+        path: '',
+        component: lazy(() => import('@/views/Home')) as LazyExoticComponent<(<T extends Meta>(props: T) => JSX.Element)>,
         authority: []
     },
     ...othersRoute,
