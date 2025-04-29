@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Front-End Development Internship Assignment
 
 ## Project Setup
@@ -106,3 +107,6 @@ Study these top-performing SaaS landing pages for inspiration:
 Take time to visit these sites and analyze what makes them effective before starting your redesign.
 
 Good luck!
+=======
+# redesign-productpage-assignment1
+>>>>>>> 4d7904f61e68e7fd341c58b02ded59e7bad5ba4c
